@@ -4,7 +4,7 @@
       v-if="visible"
       :class="[horizontalClass, verticalProperty, withIcon, setType]"
       :style="[positionStyle, mainStyle]"
-      class="absolute text-white px-4 py-3 rounded-md min-w-[250px] overflow-hidden max-w-[300px]"
+      class="absolute text-white px-4 py-3 rounded-md min-w-[300px] overflow-hidden max-w-[350px]"
     >
       <template v-if="props.type">
         <div class="relative flex items-center">
