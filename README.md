@@ -1,18 +1,64 @@
-# Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+# Vitoast - Vue Toast Package
 
-## Recommended IDE Setup
+![vitoast](https://github.com/itsalimanuel/vitoast/assets/44509661/92d43dd5-d4e4-4257-9b52-0a32cec782ec)
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
 
-## Type Support For `.vue` Imports in TS
+Vitoast is a simple and customizable toast package for Vue.js, designed to provide user-friendly notifications. It supports various options such as title, message, type (success, warning, info, error), and duration.
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## Installation
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+You can install vitoast using npm or yarn.
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+```bash
+# npm
+npm install vitoast
+
+# yarn
+yarn add vitoast
+```
+
+## Usage
+
+### Importing in your Vue component
+
+```javascript
+import Vue from 'vue';
+import toast from 'vitoast';
+
+Vue.use(toast);
+```
+
+### Displaying a Toast
+
+```javascript
+this.$toast.show({
+  title: 'Success',
+  message: 'Operation completed successfully!',
+  type: 'success',
+  duration: 3000, // Duration in milliseconds
+});
+```
+### OR 
+```javascript
+toast({
+  title: 'Success',
+  message: 'Operation completed successfully!',
+  type: 'success',
+  duration: 3000, // Duration in milliseconds
+});
+```
+
+
+### Options
+
+- **title**: (String) The title of the toast.
+- **message**: (String) The main message of the toast.
+- **type**: (String) The type of the toast. Possible values are 'success', 'warning', 'info', and 'error'.
+- **duration**: (Number) The duration for which the toast will be displayed in milliseconds.
+
+
+
+## Authors
+
+- Ali Khalouf
