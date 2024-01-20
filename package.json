@@ -1,11 +1,28 @@
 {
   "name": "vitoast",
   "private": true,
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "./dist/vitoast.umd.js",
+  "module": "./dist/vitoast.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vitoast.es.js",
+      "require": "./dist/vitoast.umd.js"
+    }
+  },
+  "types": "./dist/types/index.d.ts",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
+    "postbuild": "node script/build.js",
+    "build:lb": "vite build && vue-tsc --emitDeclarationOnly && pnpm run postbuild",
     "preview": "vite preview"
   },
   "dependencies": {
@@ -15,7 +32,9 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.17",
+    "fs": "0.0.1-security",
     "goober": "^2.1.14",
+    "path": "^0.12.7",
     "postcss": "^8.4.33",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
