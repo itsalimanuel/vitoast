@@ -34,6 +34,7 @@ Vue.use(toast);
 ```javascript
 this.$toast.show({
   title: 'Success',
+  position: "top-right",
   message: 'Operation completed successfully!',
   type: 'success',
   duration: 3000, // Duration in milliseconds
@@ -43,6 +44,7 @@ this.$toast.show({
 ```javascript
 toast({
   title: 'Success',
+  position: "top-right",
   message: 'Operation completed successfully!',
   type: 'success',
   duration: 3000, // Duration in milliseconds
@@ -56,6 +58,7 @@ toast({
 - **message**: (String) The main message of the toast.
 - **type**: (String) The type of the toast. Possible values are 'success', 'warning', 'info', and 'error'.
 - **duration**: (Number) The duration for which the toast will be displayed in milliseconds.
+- **position**: 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
 
 
 
