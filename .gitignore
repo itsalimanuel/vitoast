@@ -26,3 +26,4 @@ index.html
 *.njsproj
 *.sln
 *.sw?
+.vercel

@@ -21,15 +21,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "postbuild": "node script/build.js",
+    "postbuild": "node src/main.ts",
     "build:lb": "vite build && vue-tsc --emitDeclarationOnly && pnpm run postbuild",
     "preview": "vite preview"
   },
   "dependencies": {
     "@vueuse/core": "^10.7.2",
+    "dat.gui": "^0.7.9",
     "vue": "^3.3.11"
   },
   "devDependencies": {
+    "@types/dat.gui": "^0.7.12",
     "@vitejs/plugin-vue": "^4.5.2",
     "autoprefixer": "^10.4.17",
     "fs": "0.0.1-security",
